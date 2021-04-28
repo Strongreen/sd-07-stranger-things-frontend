@@ -1,0 +1,10 @@
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+module.exports = {
+  REACT_APP_HAWKINS_URL: process.env.REACT_APP_HAWKINS_URL,
+  REACT_APP_HAWKINS_TIMEOUT: process.env.REACT_APP_HAWKINS_TIMEOUT,
+  REACT_APP_UPSIDEDOWN_URL: process.env.REACT_APP_UPSIDEDOWN_URL,
+  REACT_APP_UPSIDEDOWN_TIMEOUT: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
+};
