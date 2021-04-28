@@ -10,18 +10,18 @@ const {
   REACT_APP_UPSIDEDOWN_TIMEOUT,
 } = process.env;
 
-const getRealityClass = (hereIsTheUpsideDownWorld) => {
-  return (hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things');
-};
+const getRealityClass = (hereIsTheUpsideDownWorld) => (
+  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
+);
 
 const strangerThingsConfig = {
-  REACT_APP_HAWKINS_URL,
-  REACT_APP_HAWKINS_TIMEOUT,
+  url: REACT_APP_HAWKINS_URL,
+  timeout: REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  REACT_APP_UPSIDEDOWN_URL,
-  REACT_APP_UPSIDEDOWN_TIMEOUT,
+  url: REACT_APP_UPSIDEDOWN_URL,
+  timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
