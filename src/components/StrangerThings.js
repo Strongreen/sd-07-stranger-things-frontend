@@ -6,7 +6,7 @@ require('dotenv').config();
 const {
   REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
-  REACT_APP_UPSIDEDOWN_UR,
+  REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_UPSIDEDOWN_TIMEOUT,
 } = process.env;
 
@@ -20,7 +20,7 @@ const strangerThingsConfig = {
 };
 
 const upsideDownConfig = {
-  url: REACT_APP_UPSIDEDOWN_UR,
+  url: REACT_APP_UPSIDEDOWN_URL,
   timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
