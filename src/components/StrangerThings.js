@@ -7,8 +7,9 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 const DEFAULT_TIMEOUT = 30000;
-const developmentStatus = process.env.DEVELOPMENT_STATUS;
+const developmentStatus = process.env.DEVELOPMENT_STATUS === 'true';
 
+console.log(developmentStatus);
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT || DEFAULT_TIMEOUT,
