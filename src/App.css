@@ -72,7 +72,7 @@
   margin-top: 5%;
 }
 
-.strangerfy > div > * {
+.strangerfy > div > *, .development-text {
   font-family: 'BenguiatITCW01-BoldCn';
   src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.eot')
       format('embedded-opentype'),
