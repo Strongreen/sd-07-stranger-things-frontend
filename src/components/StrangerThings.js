@@ -7,6 +7,8 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 const DEFAULT_TIMEOUT = 30000;
+const developmentStatus = process.env.DEVELOPMENT_STATUS;
+
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT || DEFAULT_TIMEOUT,
@@ -114,6 +116,14 @@ class StrangerThings extends React.Component {
     );
   }
 
+  renderfooter() {
+    return (
+      <footer className="development-text">
+        <h4>Em desenvolvimento</h4>
+      </footer>
+    );
+  }
+
   renderCharacters(char) {
     return (
       <tr key={ char.name }>
@@ -163,6 +173,7 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
+          {!developmentStatus ? this.renderfooter() : null}
         </div>
       </div>
     );
