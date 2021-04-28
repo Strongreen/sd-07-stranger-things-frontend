@@ -1,4 +1,5 @@
 import React from 'react';
+import runtimeEnv from '@mars/heroku-js-runtime-env';
 import CharactersService from '../services/charactersAPI';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
@@ -123,6 +124,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    const env = runtimeEnv();
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
@@ -160,7 +162,7 @@ class StrangerThings extends React.Component {
           <div>
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
-            <h1>{process.env.REACT_APP_DEVELOPMENT_MODE}</h1>
+            <h1>{env.REACT_APP_DEVELOPMENT_MODE}</h1>
           </div>
         </div>
       </div>
