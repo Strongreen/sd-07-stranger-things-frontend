@@ -8,6 +8,7 @@ const {
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_UPSIDEDOWN_TIMEOUT,
+  REACT_APP_DEV,
 } = process.env;
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
@@ -159,6 +160,9 @@ class StrangerThings extends React.Component {
                 {characters.map(this.renderCharacters)}
               </tbody>
             </table>
+            <div>
+              { REACT_APP_DEV === true && <p>Em desenvolvimento</p>}
+            </div>
           </div>
           <div>
             <p>
