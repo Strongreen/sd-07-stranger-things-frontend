@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 require('dotenv').config();
 
 const DEFAULT_TIMEOUT = 30000;
