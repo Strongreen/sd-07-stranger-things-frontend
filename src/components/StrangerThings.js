@@ -29,6 +29,7 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
+      development: JSON.parse(process.env.REACT_APP_DEVELOPMENT),
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -39,6 +40,8 @@ class StrangerThings extends React.Component {
 
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+
+    this.developmentApp = this.developmentApp.bind(this);
   }
 
   handleInput(event) {
@@ -124,8 +127,15 @@ class StrangerThings extends React.Component {
     );
   }
 
+  developmentApp(bool) {
+    if (bool) {
+      return <h2>Em desenvolvimento</h2>;
+    }
+    return;
+  }
+
   render() {
-    const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
+    const { hereIsTheUpsideDownWorld, characterName, characters, page, development } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
@@ -163,6 +173,9 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
+        </div>
+        <div>
+          {this.developmentApp(development)}
         </div>
       </div>
     );
