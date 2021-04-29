@@ -1,13 +1,15 @@
 import React from 'react';
 
-require('dotenv').config();
+
 
 class Development extends React.Component {
   render() {
+    
     return (
+        
       <p
         style={ {
-          display: process.env.REACT_APP_AMBIENT ? '' : 'none',
+          display: process.env.REACT_APP_AMBIENT === true ? '' : 'none',
           backgroundColor: 'black',
           color: 'red',
         } }
