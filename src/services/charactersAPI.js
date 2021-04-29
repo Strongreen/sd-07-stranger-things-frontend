@@ -4,7 +4,7 @@ import axios from 'axios';
 class CharactersService {
   constructor({ url = process.env.REACT_APP_HAWKINS_URL
     || process.env.REACT_APP_UPSIDEDOWN_URL,
-    timeout = process.env.REACT_APP_HAWKINS_TIMEOUT
+  timeout = process.env.REACT_APP_HAWKINS_TIMEOUT
     || process.env.REACT_APP_UPSIDEDOWN_TIMEOUT }) {
     this.http = axios.create({
       baseURL: url,
