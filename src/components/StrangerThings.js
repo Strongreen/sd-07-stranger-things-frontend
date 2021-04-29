@@ -6,12 +6,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'https://virgilio-ferreira-bk.herokuapp.com/',
+  url: process.env.REACT_APP_HAWKINS_URL,
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: 'https://virgilio-ferreira-bd.herokuapp.com/',
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: 30000,
 };
 
