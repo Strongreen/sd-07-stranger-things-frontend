@@ -30,8 +30,7 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
-      // inDevelopment: process.env.IN_DEVELOPMENT,
-      inDevelopment: 'true',
+      inDevelopment: process.env.IN_DEVELOPMENT,
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -94,7 +93,6 @@ class StrangerThings extends React.Component {
       () => this.searchCharacter(),
     );
   }
-
   previousPage() {
     const { page } = this.state;
     if (page <= 1) return;
