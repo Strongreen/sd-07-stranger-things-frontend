@@ -8,22 +8,22 @@ describe("1 - Verifica se foi feito o deploy do frontend no Heroku", () => {
   beforeEach(() => {
     cy.visit(FRONT_URL);
   });
-  it.skip("Será validado que o botão de mudar de realidade existe", () => {
+  it("Será validado que o botão de mudar de realidade existe", () => {
     cy.get(".change-reality").should("exist");
   });
 
-  it.skip("Será validado que a pesquisa funciona como deveria", () => {
+  it("Será validado que a pesquisa funciona como deveria", () => {
     cy.contains(PESQUISAR).click();
     cy.contains(MARTIN).should("exist");
   });
   
-  it.skip("Será validado que o botão de mudar de realidade funciona.", () => {
+  it("Será validado que o botão de mudar de realidade funciona.", () => {
     cy.contains("Mudar de Realidade").click();
     cy.contains(PESQUISAR).click();
     cy.contains(INVERTED_MARTIN).should("exist");
   });
 
-  it.skip("Será validado que os botões de próxima página e página anterior funcionam", () => {
+  it("Será validado que os botões de próxima página e página anterior funcionam", () => {
     cy.contains(PESQUISAR).click();
     cy.contains(MARTIN).should("exist");
     cy.contains("Próximo").click();
