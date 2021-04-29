@@ -30,6 +30,7 @@ class StrangerThings extends React.Component {
       characters: [],
       page: 1,
       // inDevelopment: process.env.IN_DEVELOPMENT,
+      inDevelopment: 'true'
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -126,8 +127,8 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    const inDevelopment = process.env.REACT_APP_IN_DEVELOPMENT;
-    const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
+    // const inDevelopment = process.env.REACT_APP_IN_DEVELOPMENT;
+    const { hereIsTheUpsideDownWorld, characterName, characters, page, inDevelopment } = this.state;
     return (
       <div className={`reality ${getRealityClass(hereIsTheUpsideDownWorld)}`}>
         <div className="content strangerfy">
@@ -137,7 +138,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
             <div>
-              {inDevelopment === 'true' ? (<p>Em desenvolvimento</p>) : '' }
+              {inDevelopment === 'true' && (<p>Em desenvolvimento</p>) }
             </div>
           </div>
           <div>
