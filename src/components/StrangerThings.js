@@ -1,12 +1,9 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
-require('dotenv').config();
+const dotenv = require('dotenv').config();
 
 const TIMEOUT = 30000;
-
-const STATUS_DEV = process.env.REACT_APP_STATUS_DEV;
-console.log(STATUS_DEV);
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -131,6 +128,8 @@ class StrangerThings extends React.Component {
 
   render() {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
+    const STATUS_DEV = process.env.REACT_APP_STATUS_DEV;
+    console.log(dotenv);
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">

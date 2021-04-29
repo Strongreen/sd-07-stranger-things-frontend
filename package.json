@@ -14,7 +14,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "deploy": "git push origin vitorRc1-sd-07-stranger-things-frontend && git push heroku vitorRc1-sd-07-stranger-things-frontend:master && git push development vitorRc1-sd-07-stranger-things-frontend:master",
+    "deploy": "git push heroku vitorRc1-sd-07-stranger-things-frontend:master && git push development vitorRc1-sd-07-stranger-things-frontend:master",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
