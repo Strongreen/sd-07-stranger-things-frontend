@@ -12,20 +12,10 @@ const UPSIDEDOWN_URL = process.env.REACT_APP_UPSIDEDOWN_URL;
 const HAWKINS_TIMEOUT = process.env.REACT_APP_HAWKINS_TIMEOUT;
 const UPSIDEDOWN_TIMEOUT = process.env.REACT_APP_UPSIDEDOWN_TIMEOUT;
 
-// const strangerThingsConfig = {
-//   url: 'http://localhost:3002',
-//   timeout: 30000,
-// };
-
 const strangerThingsConfig = {
   url: HAWKINS_URL,
   timeout: HAWKINS_TIMEOUT,
 };
-
-// const upsideDownConfig = {
-//   url: 'http://localhost:3003',
-//   timeout: 30000,
-// };
 
 const upsideDownConfig = {
   url: UPSIDEDOWN_URL,
