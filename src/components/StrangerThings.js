@@ -2,7 +2,7 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Development from './Development';
 
-require('dotenv').config();
+
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
