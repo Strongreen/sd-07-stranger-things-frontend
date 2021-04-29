@@ -2,11 +2,11 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
+const thirtyThousand = 30000; //são zambelli
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
-const thirtyThousand = 30000;
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT || thirtyThousand,
