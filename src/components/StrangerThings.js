@@ -135,7 +135,6 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-          { (process.env.DEVELOPMENT) && <h1>Em desenvolvimento</h1>}
           <div>
             <input
               placeholder="Nome do Personagem"
@@ -143,6 +142,7 @@ class StrangerThings extends React.Component {
               value={ characterName }
             />
             <button type="button" onClick={ this.searchClick }>Pesquisar</button>
+            { (process.env.DEVELOPMENT) && <h1>Em desenvolvimento</h1>}
           </div>
           <div>
             <table>
