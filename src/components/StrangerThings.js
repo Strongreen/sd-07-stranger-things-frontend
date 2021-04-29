@@ -9,12 +9,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
-  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT || thirtyThousand,
+  timeout: JSON.parse(process.env.REACT_APP_HAWKINS_TIMEOUT) || thirtyThousand,
 };
 
 const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL || 'http://localhost:3003',
-  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT || thirtyThousand,
+  timeout: JSON.parse(process.env.REACT_APP_UPSIDEDOWN_TIMEOUT) || thirtyThousand,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
