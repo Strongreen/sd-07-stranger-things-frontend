@@ -1,5 +1,8 @@
 import React from 'react';
-import { REACT_APP_HAWKINS_URL, REACT_APP_HAWKINS_TIMEOUT, REACT_APP_UPSIDEDOWN_URL } from 'dotenv';
+import { REACT_APP_HAWKINS_URL,
+  REACT_APP_HAWKINS_TIMEOUT,
+  REACT_APP_UPSIDEDOWN_URL,
+  REACT_APP_UPSIDEDOWN_TIMEOUT } from 'dotenv';
 import CharactersService from '../services/charactersAPI';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
