@@ -1,6 +1,8 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
+// subindo para repositório
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
