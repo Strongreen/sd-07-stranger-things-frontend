@@ -125,7 +125,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    const inDevelopment = process.env.IN_DEVELOPMENT
+    const inDevelopment = JSON.parse(process.env.IN_DEVELOPMENT)
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
@@ -136,7 +136,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
             <div>
-              {() => {if (inDevelopment){(<p>Em desenvolvimento</p>)}}}
+              {() => {if (inDevelopment){return (<p>Em desenvolvimento</p>)}}}
             </div>
           </div>
           <div>
