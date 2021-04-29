@@ -11,6 +11,7 @@ const HAWKINS_URL = process.env.REACT_APP_HAWKINS_URL;
 const UPSIDEDOWN_URL = process.env.REACT_APP_UPSIDEDOWN_URL;
 const HAWKINS_TIMEOUT = process.env.REACT_APP_HAWKINS_TIMEOUT;
 const UPSIDEDOWN_TIMEOUT = process.env.REACT_APP_UPSIDEDOWN_TIMEOUT;
+const remote = process.env.REACT_APP_DEVELOPMENT;
 
 const strangerThingsConfig = {
   url: HAWKINS_URL,
@@ -134,6 +135,7 @@ class StrangerThings extends React.Component {
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
+          {remote === 'development' ? 'Em desenvolvimento' : '' }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
