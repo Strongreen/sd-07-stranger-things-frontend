@@ -29,7 +29,7 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
-      inDevelopment: process.env.IN_DEVELOPMENT,
+      inDevelopment: JSON.parse(process.env.IN_DEVELOPMENT),
     };
 
     this.handleInput = this.handleInput.bind(this);
