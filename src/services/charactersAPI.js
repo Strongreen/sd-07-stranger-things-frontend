@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 class CharactersService {
   constructor({ url = process.env.REACT_APP_HAWKINS_URL
     || process.env.REACT_APP_UPSIDEDOWN_URL,
