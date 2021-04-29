@@ -3,11 +3,11 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
-const isDev = process.env.DEV;
-
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
+
+const isDev = process.env.DEV === 'true';
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
