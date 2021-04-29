@@ -2,7 +2,8 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
-const thirtyThousand = 30000; //são zambelli
+
+const thirtyThousand = 30000; // são zambelli
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -30,7 +31,7 @@ class StrangerThings extends React.Component {
       characters: [],
       page: 1,
       // inDevelopment: process.env.IN_DEVELOPMENT,
-      inDevelopment: 'true'
+      inDevelopment: 'true',
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -118,7 +119,7 @@ class StrangerThings extends React.Component {
 
   renderCharacters(char) {
     return (
-      <tr key={char.name}>
+      <tr key={ char.name }>
         <td>{char.name}</td>
         <td>{char.origin}</td>
         <td>{char.status}</td>
@@ -127,13 +128,16 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    // const inDevelopment = process.env.REACT_APP_IN_DEVELOPMENT;
-    const { hereIsTheUpsideDownWorld, characterName, characters, page, inDevelopment } = this.state;
+    const {
+      hereIsTheUpsideDownWorld,
+      characterName,
+      characters, page, inDevelopment,
+    } = this.state;
     return (
-      <div className={`reality ${getRealityClass(hereIsTheUpsideDownWorld)}`}>
+      <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
           <div className="change-reality">
-            <button type="button" onClick={this.changeRealityClick}>
+            <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
             </button>
@@ -144,10 +148,10 @@ class StrangerThings extends React.Component {
           <div>
             <input
               placeholder="Nome do Personagem"
-              onChange={this.handleInput}
-              value={characterName}
+              onChange={ this.handleInput }
+              value={ characterName }
             />
-            <button type="button" onClick={this.searchClick}>Pesquisar</button>
+            <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
           <div>
             <table>
@@ -166,8 +170,8 @@ class StrangerThings extends React.Component {
             </p>
           </div>
           <div>
-            <button type="button" onClick={this.previousPage}>Anterior</button>
-            <button type="button" onClick={this.nextPage}>Próximo</button>
+            <button type="button" onClick={ this.previousPage }>Anterior</button>
+            <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
         </div>
       </div>
