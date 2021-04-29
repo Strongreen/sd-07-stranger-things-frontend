@@ -1,5 +1,6 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
+import Development from './Development';
 
 require('dotenv').config();
 
@@ -128,16 +129,11 @@ class StrangerThings extends React.Component {
 
   render() {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
+    const checkAmbient = process.env.NODE_ENV === 'development';
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
-
         <div className="content strangerfy">
-          <p
-            hidden={ process.env.AMBIENT ? '' : 'hidden' }
-            style={ { backgroundColor: 'black', color: 'red' } }
-          >
-            Em desenvolvimento
-          </p>
+          {checkAmbient ? <Development /> : ''}
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
