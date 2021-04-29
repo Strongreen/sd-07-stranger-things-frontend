@@ -1,18 +1,21 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
+require('dotenv').config();
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
+const seconds = 30000;
 const strangerThingsConfig = {
-  url: process.env.REACT_APP_HAWKINS_URL,
-  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
+  url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT || seconds,
 };
 
 const upsideDownConfig = {
-  url: process.env.REACT_APP_UPSIDEDOWN_URL,
-  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL || 'http://localhost:3003',
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT || seconds,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -126,6 +129,7 @@ class StrangerThings extends React.Component {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
+        { process.env.DEVELOPMENT_MODE ? <p>Em desenvolvimento</p> : null }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
