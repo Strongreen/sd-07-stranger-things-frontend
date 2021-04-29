@@ -1,9 +1,5 @@
 import axios from 'axios';
 
-// if (process.env.NODE_ENV !== 'production') {
-//   require('dotenv').config();
-// }
-
 const DEFAULT_TIMEOUT = 30000;
 class CharactersService {
   constructor({ url = 'http://localhost:3000', timeout = DEFAULT_TIMEOUT }) {

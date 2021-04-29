@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-04-29T14:26:41.737Z",
+    "end": "2021-04-29T14:26:59.676Z",
+    "duration": 17939,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4e4a82cc-7db6-4c55-ac38-4d6198cbd503",
+      "title": "",
+      "fullFile": "cypress/integration/developerMode.spec.js",
+      "file": "cypress/integration/developerMode.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bac459f4-87e0-4745-9fd6-613e52871414",
+          "title": "3 - Verifica os multi-ambientes e modo de desenvolvimento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "timedOut": null,
+              "duration": 13009,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL);\ncy.contains(\"Em desenvolvimento\").should(\"exist\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Em desenvolvimento' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Em desenvolvimento' but never did.\n    at Context.eval (https://nevesfreire-ft.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:104:39)",
+                "diff": null
+              },
+              "uuid": "26c812b1-7fb2-4e9d-9bdc-6d46f45a431f",
+              "parentUUID": "bac459f4-87e0-4745-9fd6-613e52871414",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "timedOut": null,
+              "duration": 1354,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL_PROD);\ncy.contains(\"Em desenvolvimento\").should(\"not.exist\");",
+              "err": {
+                "message": "SyntaxError: The following error originated from your application code, not from Cypress.\n\n  > Unexpected token u in JSON at position 0\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "SyntaxError: The following error originated from your application code, not from Cypress.\n\n  > Unexpected token u in JSON at position 0\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at JSON.parse (<anonymous>)\n    at a.value (https://nevesfreire-pd.herokuapp.com/static/js/main.d0dda608.chunk.js:1:2900)\n    at Fl (https://nevesfreire-pd.herokuapp.com/static/js/2.c4033b8d.chunk.js:2:89391)\n    at Ml (https://nevesfreire-pd.herokuapp.com/static/js/2.c4033b8d.chunk.js:2:89184)\n    at va (https://nevesfreire-pd.herokuapp.com/static/js/2.c4033b8d.chunk.js:2:125095)\n    at cu (https://nevesfreire-pd.herokuapp.com/static/js/2.c4033b8d.chunk.js:2:116310)\n    at au (https://nevesfreire-pd.herokuapp.com/static/js/2.c4033b8d.chunk.js:2:116235)\n    at Za (https://nevesfreire-pd.herokuapp.com/static/js/2.c4033b8d.chunk.js:2:113244)\n    at Ka (https://nevesfreire-pd.herokuapp.com/static/js/2.c4033b8d.chunk.js:2:110005)\n    at Au (https://nevesfreire-pd.herokuapp.com/static/js/2.c4033b8d.chunk.js:2:131514)",
+                "diff": null
+              },
+              "uuid": "c246e760-1a62-49da-962f-249e1d7a1759",
+              "parentUUID": "bac459f4-87e0-4745-9fd6-613e52871414",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "26c812b1-7fb2-4e9d-9bdc-6d46f45a431f",
+            "c246e760-1a62-49da-962f-249e1d7a1759"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14363,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

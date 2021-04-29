@@ -29,6 +29,7 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
+      inDevelopment: process.env.IN_DEVELOPMENT,
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -125,8 +126,8 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    const inDevelopment = JSON.parse(process.env.IN_DEVELOPMENT)
-    const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
+
+    const { hereIsTheUpsideDownWorld, characterName, characters, page, inDevelopment } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
