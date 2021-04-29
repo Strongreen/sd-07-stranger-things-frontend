@@ -93,6 +93,7 @@ class StrangerThings extends React.Component {
       () => this.searchCharacter(),
     );
   }
+
   previousPage() {
     const { page } = this.state;
     if (page <= 1) return;
