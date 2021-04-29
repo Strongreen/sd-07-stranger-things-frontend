@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "git push origin alvaro-stranger-things-front && git push development alvaro-stranger-things-front:master && git push production alvaro-stranger-things-front:master",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
