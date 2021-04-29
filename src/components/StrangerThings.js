@@ -177,4 +177,4 @@ class StrangerThings extends React.Component {
 }
 
 export default StrangerThings;
-// subindo heroku
+// subindo corigido heroku
