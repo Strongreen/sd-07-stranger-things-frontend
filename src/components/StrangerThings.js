@@ -3,6 +3,8 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
+const isDevEnv = process.env.DEV_ENV;
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -128,7 +130,7 @@ class StrangerThings extends React.Component {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
-        <span>Em desenvolvimento</span>
+        {isDevEnv === 'true' ? <span>Em desenvolvimento</span> : null }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
