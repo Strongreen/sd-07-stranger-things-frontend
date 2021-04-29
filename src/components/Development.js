@@ -9,12 +9,12 @@ class Development extends React.Component {
         
       <p
         style={ {
-          display: process.env.REACT_APP_AMBIENT === true ? '' : 'none',
+          display: process.env.REACT_APP_AMBIENT === true  ? '' : 'none',
           backgroundColor: 'black',
           color: 'red',
         } }
       >
-        Em desenvolvimento
+        {process.env.REACT_APP_AMBIENT === true ? 'Em desenvolvimento' : ''}
       </p>
     );
   }
