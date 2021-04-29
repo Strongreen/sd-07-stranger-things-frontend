@@ -131,7 +131,6 @@ class StrangerThings extends React.Component {
     if (bool) {
       return <h2>Em desenvolvimento</h2>;
     }
-    return;
   }
 
   render() {
