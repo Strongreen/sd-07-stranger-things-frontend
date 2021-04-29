@@ -1,9 +1,8 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
-require('dotenv').config();
-
 const {
+  DEVELOPMENT_STAGE,
   REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL,
@@ -132,11 +131,13 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    console.log(DEVELOPMENT_STAGE, process.env)
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
           <div className="change-reality">
+            { DEVELOPMENT_STAGE === 'true' && <h1>Em desenvolvimento</h1>}
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
