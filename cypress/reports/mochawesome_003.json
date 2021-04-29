@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-29T16:43:39.708Z",
+    "end": "2021-04-29T16:43:59.807Z",
+    "duration": 20099,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8eb207f0-254c-4feb-a2dc-c10ee80ce4b7",
+      "title": "",
+      "fullFile": "cypress/integration/developerMode.spec.js",
+      "file": "cypress/integration/developerMode.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6cbdb1ab-1a48-4133-ae4d-c10b61c68e42",
+          "title": "3 - Verifica os multi-ambientes e modo de desenvolvimento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "timedOut": null,
+              "duration": 8438,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL);\ncy.contains(\"Em desenvolvimento\").should(\"exist\");",
+              "err": {},
+              "uuid": "82cb1c49-c6a4-417d-aeb5-19f2f4a70009",
+              "parentUUID": "6cbdb1ab-1a48-4133-ae4d-c10b61c68e42",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "timedOut": null,
+              "duration": 6486,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL_PROD);\ncy.contains(\"Em desenvolvimento\").should(\"not.exist\");",
+              "err": {},
+              "uuid": "24dc34f9-8243-4554-9aff-53bf816a2cae",
+              "parentUUID": "6cbdb1ab-1a48-4133-ae4d-c10b61c68e42",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82cb1c49-c6a4-417d-aeb5-19f2f4a70009",
+            "24dc34f9-8243-4554-9aff-53bf816a2cae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14924,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
