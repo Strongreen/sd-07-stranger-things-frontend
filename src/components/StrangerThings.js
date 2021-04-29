@@ -128,7 +128,7 @@ class StrangerThings extends React.Component {
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
           <div className="change-reality">
-            <p>{process.env.REACT_APP_FRONT_URL || process.env.REACT_APP_FRONT_URL_PROD}</p>
+            <p>{process.env.REACT_APP_FRONT_URL}</p>
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
