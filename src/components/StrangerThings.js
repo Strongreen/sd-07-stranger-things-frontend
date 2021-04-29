@@ -3,11 +3,11 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
+const TIMEOUT = 30000;
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
-
-const TIMEOUT = 30000;
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
