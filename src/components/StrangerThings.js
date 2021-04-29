@@ -12,8 +12,10 @@ const {
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_UPSIDEDOWN_TIMEOUT,
-  ENV,
+  REACT_APP_ENV,
 } = process.env;
+
+console.log(REACT_APP_ENV);
 
 const strangerThingsConfig = {
   url: REACT_APP_HAWKINS_URL,
@@ -171,7 +173,7 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
-          { ENV === 'development' && <span>Em desenvolvimento</span> }
+          { REACT_APP_ENV === 'development' && <span>Em desenvolvimento</span> }
         </div>
       </div>
     );
