@@ -18,6 +18,8 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT || seconds,
 };
 
+const dev = process.env.DEVELOPMENT_MODE || true;
+
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -127,7 +129,6 @@ class StrangerThings extends React.Component {
 
   render() {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
-    const { DEVELOPMENT_MODE,  } = process.env;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
@@ -137,9 +138,9 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-          <p>
-            { DEVELOPMENT_MODE === 'true' ? <p>Em desenvolvimento</p> : null }
-          </p>
+          <div>
+            { dev === true || dev === 'true' ? <p>Em desenvolvimento</p> : null }
+          </div>
           <div>
             <input
               placeholder="Nome do Personagem"
