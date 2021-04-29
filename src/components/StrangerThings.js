@@ -2,8 +2,6 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Development from './Development';
 
-
-
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -127,6 +125,7 @@ class StrangerThings extends React.Component {
     );
   }
 
+  // s
   render() {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     const checkAmbient = process.env.NODE_ENV === 'development';
