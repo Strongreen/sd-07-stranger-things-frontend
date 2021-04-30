@@ -8,6 +8,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 const DEFAULT_TIMEOUT = 30000;
 const developmentStatus = process.env.REACT_APP_DEVELOPMENT_STATUS === 'false';
+const HashTest = 'xA2T_Ptlfs1AAw0MY_hxW7n9pNBeRURR11Q9ihyBPfY';
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
@@ -135,7 +136,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    console.log(developmentStatus);
+    console.log(HashTest);
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
