@@ -1,6 +1,7 @@
 import React from 'react';
-import CharactersService from '../services/charactersAPI';
 import dotEnv from 'dotenv';
+import CharactersService from '../services/charactersAPI';
+
 dotEnv.config();
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
@@ -29,7 +30,6 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
-      development: JSON.parse(process.env.REACT_APP_DEVELOPMENT),
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -107,6 +107,12 @@ class StrangerThings extends React.Component {
     );
   }
 
+  developmentApp() {
+    const envDevelopment = JSON.parse(process.env.REACT_APP_DEVELOPMENT);
+    console.log(envDevelopment);
+    if (envDevelopment) return <h2>Em desenvolvimento</h2>;
+  }
+
   renderHeader() {
     return (
       <tr>
@@ -127,14 +133,9 @@ class StrangerThings extends React.Component {
     );
   }
 
-  developmentApp(bool) {
-    if (bool) {
-      return <h2>Em desenvolvimento</h2>;
-    }
-  }
-
   render() {
-    const { hereIsTheUpsideDownWorld, characterName, characters, page, development } = this.state;
+    const { hereIsTheUpsideDownWorld, characterName,
+      characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
@@ -172,9 +173,9 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
-        </div>
-        <div>
-          {this.developmentApp(development)}
+          <div>
+            {this.developmentApp()}
+          </div>
         </div>
       </div>
     );
