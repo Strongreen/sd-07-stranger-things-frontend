@@ -79,9 +79,7 @@ class StrangerThings extends React.Component {
     service
       .getCharacters(characterName, pages || page, numberOfPages)
       .then(({ data: characters }) => {
-        this.setState({
-          characters,
-        });
+        this.setState({ characters });
       });
   }
 
