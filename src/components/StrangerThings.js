@@ -67,7 +67,7 @@ class StrangerThings extends React.Component {
     const service = hereIsTheUpsideDownWorld
       ? charactersUpsideDownService
       : charactersService;
-
+    console.log(service);
     const numberOfPages = 10;
     service
       .getCharacters(characterName, pages || page, numberOfPages)
@@ -75,6 +75,7 @@ class StrangerThings extends React.Component {
         this.setState({
           characters,
         });
+        console.log('LINHA 78', characters);
       });
   }
 
