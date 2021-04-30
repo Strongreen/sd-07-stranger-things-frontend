@@ -7,9 +7,8 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 const DEFAULT_TIMEOUT = 30000;
-const developmentStatus = process.env.DEVELOPMENT_STATUS === 'true';
+const developmentStatus = process.env.REACT_APP_DEVELOPMENT_STATUS === 'true';
 
-console.log(developmentStatus);
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT || DEFAULT_TIMEOUT,
@@ -136,6 +135,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    console.log(developmentStatus);
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
@@ -174,7 +174,7 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
-          {!developmentStatus ? this.renderfooter() : null}
+          {developmentStatus ? this.renderfooter() : null}
         </div>
       </div>
     );
