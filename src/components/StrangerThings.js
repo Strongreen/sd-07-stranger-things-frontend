@@ -1,5 +1,6 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
+
 require('dotenv');
 
 const { REACT_APP_DEVELOPMENT, REACT_APP_HAWKINS_URL, REACT_APP_HAWKINS_TIMEOUT,
@@ -131,8 +132,7 @@ class StrangerThings extends React.Component {
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
-        { REACT_APP_DEVELOPMENT === "true" ? <span>Em desenvolvimento</span> : null }
-        { console.log(REACT_APP_DEVELOPMENT) }
+          { REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
