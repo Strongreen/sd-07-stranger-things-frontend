@@ -1,5 +1,6 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
+import { getAll } from '../../database';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -60,6 +61,7 @@ class StrangerThings extends React.Component {
       },
       this.searchCharacter(1),
     );
+    getAll();
   }
 
   searchCharacter(pages) {
