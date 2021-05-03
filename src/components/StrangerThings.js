@@ -1,19 +1,18 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
-import { getAll } from '../../database';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: process.env.REACT_APP_HAWKINS_URL,
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
-
+console.log(process.env);
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -61,7 +60,6 @@ class StrangerThings extends React.Component {
       },
       this.searchCharacter(1),
     );
-    getAll();
   }
 
   searchCharacter(pages) {
