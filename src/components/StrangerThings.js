@@ -124,7 +124,7 @@ class StrangerThings extends React.Component {
 
   renderCharacters(char) {
     return (
-      <tr key={char.name}>
+      <tr key={ char.name }>
         <td>{char.name}</td>
         <td>{char.origin}</td>
         <td>{char.status}</td>
@@ -135,12 +135,12 @@ class StrangerThings extends React.Component {
   render() {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
-      <div className={`reality ${getRealityClass(hereIsTheUpsideDownWorld)}`}>
+      <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
           {/* source: https://github.com/tryber/sd-07-stranger-things-frontend/blob/paula-jfe-stranger-things-project-frontend/src/components/StrangerThings.js */}
           {REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null}
           <div className="change-reality">
-            <button type="button" onClick={this.changeRealityClick}>
+            <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
             </button>
@@ -148,10 +148,10 @@ class StrangerThings extends React.Component {
           <div>
             <input
               placeholder="Nome do Personagem"
-              onChange={this.handleInput}
-              value={characterName}
+              onChange={ this.handleInput }
+              value={ characterName }
             />
-            <button type="button" onClick={this.searchClick}>Pesquisar</button>
+            <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
           <div>
             <table>
@@ -170,8 +170,8 @@ class StrangerThings extends React.Component {
             </p>
           </div>
           <div>
-            <button type="button" onClick={this.previousPage}>Anterior</button>
-            <button type="button" onClick={this.nextPage}>Próximo</button>
+            <button type="button" onClick={ this.previousPage }>Anterior</button>
+            <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
         </div>
       </div>
@@ -180,3 +180,4 @@ class StrangerThings extends React.Component {
 }
 
 export default StrangerThings;
+
