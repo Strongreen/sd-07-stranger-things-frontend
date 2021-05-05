@@ -1,6 +1,8 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
+
 require('dotenv').config();
+
 const {
   REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
@@ -8,7 +10,7 @@ const {
   REACT_APP_UPSIDEDOWN_TIMEOUT,
 } = process.env;
 
- const getRealityClass = (hereIsTheUpsideDownWorld) => (
+const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
