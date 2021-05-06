@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 require('dotenv').config();
 
 const DEFAULT_TIMEOUT = 30000;
@@ -9,7 +10,7 @@ class CharactersService {
       timeout,
     });
   }
-  
+
   async getCharacters(name, page, size) {
     const params = {
       page,
