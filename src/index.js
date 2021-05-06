@@ -17,3 +17,4 @@ ReactDOM.render(
 serviceWorker.unregister();
 
 // ajuda de Zega e Thadeu Castelo Branco
+// git push heroku rodrigoandrademelo-sd-07-stranger-things-frontend:master
