@@ -16,7 +16,8 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-// ajuda de Zega e Thadeu Castelo Branco
+// Referencias
+// Vanessa Oliveira, André Possa, Zega, Matheus Almeida eThadeu Castelo Branco
 // git push heroku rodrigoandrademelo-sd-07-stranger-things-frontend:master
 // bd=invertido
 // git remote rename heroku hawkins
