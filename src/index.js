@@ -19,4 +19,4 @@ serviceWorker.unregister();
 // ajuda de Zega e Thadeu Castelo Branco
 // git push heroku rodrigoandrademelo-sd-07-stranger-things-frontend:master
 // bd=invertido
-// git remote rename heroku hawkins 
+// git remote rename heroku hawkins
