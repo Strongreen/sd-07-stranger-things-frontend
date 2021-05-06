@@ -3,6 +3,8 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
+// comentário inocente
+
 const {
   REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
