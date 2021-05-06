@@ -6,13 +6,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: process.env.REACT_APP_HAWKINS_URL,
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -102,30 +102,17 @@ class StrangerThings extends React.Component {
     );
   }
 
-  renderHeader() {
-    return (
-      <tr>
-        <th>Nome</th>
-        <th>Origem</th>
-        <th>Status</th>
-      </tr>
-    );
-  }
-
-  renderCharacters(char) {
-    return (
-      <tr key={ char.name }>
-        <td>{char.name}</td>
-        <td>{char.origin}</td>
-        <td>{char.status}</td>
-      </tr>
-    );
-  }
-
   render() {
-    const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
+    const {
+      hereIsTheUpsideDownWorld, characterName, characters, page,
+    } = this.state;
     return (
-      <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
+      <div
+        className={ `reality ${getRealityClass(
+          hereIsTheUpsideDownWorld,
+        )}` }
+      >
+        <h1>Em desenvolvimento</h1>
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
@@ -133,6 +120,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
+
           <div>
             <input
               placeholder="Nome do Personagem"
@@ -141,16 +129,28 @@ class StrangerThings extends React.Component {
             />
             <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
+
           <div>
             <table>
               <thead>
-                {this.renderHeader()}
+                <tr>
+                  <th>Nome</th>
+                  <th>Origem</th>
+                  <th>Status</th>
+                </tr>
               </thead>
               <tbody>
-                {characters.map(this.renderCharacters)}
+                {characters.map((char) => (
+                  <tr key={ char.name }>
+                    <td>{char.name}</td>
+                    <td>{char.origin}</td>
+                    <td>{char.status}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
+
           <div>
             <p>
               Página atual:
