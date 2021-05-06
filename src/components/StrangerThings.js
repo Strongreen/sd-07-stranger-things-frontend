@@ -24,6 +24,8 @@ const upsideDownConfig = {
   timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
+console.log({ upsideDownConfig, strangerThingsConfig });
+
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -136,7 +138,7 @@ class StrangerThings extends React.Component {
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
-          { REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null}
+
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
