@@ -137,7 +137,6 @@ class StrangerThings extends React.Component {
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
-          { REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
@@ -173,6 +172,7 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
         </div>
+        { REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null}
       </div>
     );
   }
