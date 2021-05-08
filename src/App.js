@@ -9,11 +9,11 @@ const {
   STATUS_APP,
 } = process.env;
 
-
+console.log(STATUS_APP)
 function App() {
   return (
     <div className="App">
-      { STATUS_APP === 'false' ? <h4>Em desenvolvimento</h4> : null }
+      { STATUS_APP === undefined ? <h4>Em desenvolvimento</h4> : null }
       <StrangerThings />
     </div>
   );
