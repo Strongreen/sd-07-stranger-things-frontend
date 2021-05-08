@@ -5,6 +5,7 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
+
 const {
   REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
@@ -139,6 +140,7 @@ class StrangerThings extends React.Component {
       characters,
       page,
     } = this.state;
+
     return (
       <div className={`reality ${getRealityClass(hereIsTheUpsideDownWorld)}`}>
         <div className="content strangerfy">

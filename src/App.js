@@ -4,16 +4,17 @@ import StrangerThings from './components/StrangerThings';
 
 require('dotenv').config();
 
-const { STATUS } = process.env;
+
+const {
+  STATUS_APP,
+} = process.env;
 
 
 function App() {
   return (
     <div className="App">
-      { STATUS !== 'producao' && <p>Em desenvolvimento</p> }
-      <StrangerThings />
+      { STATUS_APP !== undefined ? <h4>Em desenvolvimento</h4> : <StrangerThings />}
     </div>
   );
 }
-
 export default App;
