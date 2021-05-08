@@ -4,11 +4,7 @@ import StrangerThings from './components/StrangerThings';
 
 require('dotenv').config();
 
-
-const {
-  REACT_APP_DEVELOPMENT,
-} = process.env;
-console.log(REACT_APP_DEVELOPMENT)
+const {  REACT_APP_DEVELOPMENT } = process.env;
 
 function App() {
   return (
