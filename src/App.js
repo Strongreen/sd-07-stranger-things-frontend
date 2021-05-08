@@ -6,13 +6,14 @@ require('dotenv').config();
 
 
 const {
-  STATUS_APP,
+  REACT_APP_DEVELOPMENT,
 } = process.env;
+console.log(REACT_APP_DEVELOPMENT)
 
 function App() {
   return (
     <div className="App">
-      { STATUS_APP === undefined ? <h4> Em desenvolvimento </h4> : null }
+      { REACT_APP_DEVELOPMENT === 'true' ? <h4> Em desenvolvimento </h4> : null }
       <StrangerThings />
     </div>
   );
