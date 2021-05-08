@@ -10,7 +10,7 @@ const { STATUS } = process.env;
 function App() {
   return (
     <div className="App">
-      { STATUS !== 'producao' ?? 'Em desenvolvimento' }
+      { STATUS !== 'producao' && <p>Em desenvolvimento</p> }
       <StrangerThings />
     </div>
   );
