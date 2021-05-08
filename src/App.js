@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
+import StrangerThings from './components/StrangerThings';
 
 require('dotenv').config();
 
 const { STATUS } = process.env;
 
-import StrangerThings from './components/StrangerThings';
 
 function App() {
   return (
