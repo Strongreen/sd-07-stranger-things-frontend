@@ -33,7 +33,7 @@ class StrangerThings extends React.Component {
     super(props);
 
     this.state = {
-      status: Boolean(REACT_APP_STATUS === 'true'),
+      // status: Boolean(REACT_APP_STATUS === 'true'),
       hereIsTheUpsideDownWorld: false,
       characterName: '',
       characters: [],
@@ -135,11 +135,11 @@ class StrangerThings extends React.Component {
 
   render() {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
-    const { status } = this.state;
+    // const { status } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
-          { status ? <span>Em desenvolvimento</span> : null }
+          { REACT_APP_STATUS === 'dev' ? <span>Em desenvolvimento</span> : null }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
