@@ -13,7 +13,8 @@ const {
 function App() {
   return (
     <div className="App">
-      { STATUS_APP === 'false' ? <h4>Em desenvolvimento</h4> : <StrangerThings />}
+      { STATUS_APP === 'false' ? <h4>Em desenvolvimento</h4> : null }
+      <StrangerThings />
     </div>
   );
 }
