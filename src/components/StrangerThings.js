@@ -1,4 +1,4 @@
-// era o heroku dormindo?
+// agora foi?
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
