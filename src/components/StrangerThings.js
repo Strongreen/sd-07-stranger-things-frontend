@@ -5,6 +5,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 const {
+  REACT_APP_DEVELOPMENT,
   REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL,
@@ -162,6 +163,9 @@ class StrangerThings extends React.Component {
               Página atual:
               {page}
             </p>
+          </div>
+          <div>
+            {REACT_APP_DEVELOPMENT === 'true' ? <p>Em desenvolvimento</p> : null}
           </div>
           <div>
             <button type="button" onClick={ this.previousPage }>Anterior</button>
