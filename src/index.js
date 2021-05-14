@@ -18,3 +18,4 @@ serviceWorker.unregister();
 
 // npm run cypress:open // (Com interface)
 // npm run cy // (via CLI)
+//  REACT_APP_DEVELOPMENT_STAGE
