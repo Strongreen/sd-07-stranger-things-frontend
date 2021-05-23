@@ -23,11 +23,11 @@ class CharactersService {
       size,
       name,
     };
-
+    /*
     const result = await axios.get(`${url}`);
     console.log('Resultado', result);
-    return result;
-    // return this.http.get(`${url}`, { params });
+    return result; */
+    return this.http.get('/', { params });
   }
 }
 
