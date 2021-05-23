@@ -24,7 +24,7 @@ class CharactersService {
       name,
     };
 
-    return this.http.get('/', { params });
+    return this.http.get(`${url}`, { params });
   }
 }
 
