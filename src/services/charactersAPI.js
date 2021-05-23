@@ -23,11 +23,12 @@ class CharactersService {
       size,
       name,
     };
+
     /*
-    const result = await axios.get(`${url}`);
-    console.log('Resultado', result);
+    const result = await axios.get(`${process.env.REACT_APP_HAWKINS_URL}`, { params });
+    console.log('Resultado', result.data);
     return result; */
-    return this.http.get('/', { params });
+    return this.http.get(`${process.env.REACT_APP_HAWKINS_URL}`, { params });
   }
 }
 
