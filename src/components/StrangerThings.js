@@ -164,9 +164,9 @@ class StrangerThings extends React.Component {
               Página atual:
               {page}
             </p>
-            <div>
-              {REACT_APP_DEVELOPMENT === 'true' ? <p>Em desenvolvimento</p> : ''}
-            </div>
+          </div>
+          <div>
+            {REACT_APP_DEVELOPMENT === 'true' ? <p>Em desenvolvimento</p> : null}
           </div>
           <div>
             <button type="button" onClick={ this.previousPage }>Anterior</button>
