@@ -1,8 +1,16 @@
 import axios from 'axios';
 
-const DEFAULT_TIMEOUT = 30000;
+require('dotenv').config();
+
+const defaultTimeout = 30000;
+
+const DEFAULT_TIMEOUT = process.env.DEFAULT_TIMEOUT || defaultTimeout;
+
 class CharactersService {
-  constructor({ url = 'http://localhost:3000', timeout = DEFAULT_TIMEOUT }) {
+  constructor({
+    url = `${process.env.REACT_APP_HAWKINS_URL}`,
+    timeout = DEFAULT_TIMEOUT,
+  }) {
     this.http = axios.create({
       baseURL: url,
       timeout,
