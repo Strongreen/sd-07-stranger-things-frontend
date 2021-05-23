@@ -169,7 +169,7 @@ class StrangerThings extends React.Component {
             </p>
           </div>
           <div>
-            { REACT_APP_DEVELOPMENT === 'true' && <p> Em desenvolvimento</p> }
+            { REACT_APP_DEVELOPMENT === 'true' && <p>Em desenvolvimento</p> }
           </div>
           <div>
             <button type="button" onClick={ this.previousPage }>Anterior</button>
