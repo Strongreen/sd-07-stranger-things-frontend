@@ -24,7 +24,10 @@ class CharactersService {
       name,
     };
 
-    return this.http.get(`${url}`, { params });
+    const result = await axios.get(`${url}`);
+    console.log('Resultado', result);
+    return result;
+    // return this.http.get(`${url}`, { params });
   }
 }
 
