@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-05-24T22:18:06.909Z",
+    "end": "2021-05-24T22:18:09.626Z",
+    "duration": 2717,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1b8b568d-c151-4bba-8486-de5833dabcec",
+      "title": "",
+      "fullFile": "cypress/integration/developerMode.spec.js",
+      "file": "cypress/integration/developerMode.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "602d89e5-0c5e-4cdb-ad75-a6fae6e57ebc",
+          "title": "3 - Verifica os multi-ambientes e modo de desenvolvimento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "timedOut": null,
+              "duration": 1303,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL);\ncy.contains(\"Em desenvolvimento\").should(\"exist\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://igor-leao-ft.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 503: Service Unavailable\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://igor-leao-ft.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 503: Service Unavailable\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at http://localhost:37443/__cypress/runner/cypress_runner.js:158062:25\n    at visitFailedByErr (http://localhost:37443/__cypress/runner/cypress_runner.js:157432:12)\n    at http://localhost:37443/__cypress/runner/cypress_runner.js:158042:13\n    at tryCatcher (http://localhost:37443/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (http://localhost:37443/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (http://localhost:37443/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (http://localhost:37443/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (http://localhost:37443/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (http://localhost:37443/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (http://localhost:37443/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:37443/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (http://localhost:37443/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:37443/__cypress/tests?p=cypress/integration/developerMode.spec.js:103:8)",
+                "diff": null
+              },
+              "uuid": "c7c889f0-7390-417e-aa8c-8ceb0523b075",
+              "parentUUID": "602d89e5-0c5e-4cdb-ad75-a6fae6e57ebc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "fullTitle": "3 - Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "timedOut": null,
+              "duration": 938,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL_PROD);\ncy.contains(\"Em desenvolvimento\").should(\"not.exist\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://igor-leao-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 502: Bad Gateway\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://igor-leao-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 502: Bad Gateway\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at http://localhost:37443/__cypress/runner/cypress_runner.js:158062:25\n    at visitFailedByErr (http://localhost:37443/__cypress/runner/cypress_runner.js:157432:12)\n    at http://localhost:37443/__cypress/runner/cypress_runner.js:158042:13\n    at tryCatcher (http://localhost:37443/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (http://localhost:37443/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (http://localhost:37443/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (http://localhost:37443/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (http://localhost:37443/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (http://localhost:37443/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (http://localhost:37443/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:37443/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (http://localhost:37443/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:37443/__cypress/tests?p=cypress/integration/developerMode.spec.js:107:8)",
+                "diff": null
+              },
+              "uuid": "23abc85b-e10f-4ccb-bbcb-0226ae208414",
+              "parentUUID": "602d89e5-0c5e-4cdb-ad75-a6fae6e57ebc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c7c889f0-7390-417e-aa8c-8ceb0523b075",
+            "23abc85b-e10f-4ccb-bbcb-0226ae208414"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2241,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
