@@ -1,3 +1,8 @@
+// Utilizei 2 projetos de colegas como referência para concluir a parte do front end
+// Meus únicos horários livres do trabalho não tem me permitido participar do plantões
+// https://github.com/tryber/sd-07-stranger-things-frontend/pull/99
+// https://github.com/tryber/sd-07-stranger-things-frontend/pull/100
+
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
