@@ -45,9 +45,9 @@ class StrangerThings extends React.Component {
     this.searchCharacter();
   }
 
-  componentDidUpdate(_prevProps, { hereIsTheUpsideDownWorld }) {
-    const stateUpside = this.state.hereIsTheUpsideDownWorld;
-    if (hereIsTheUpsideDownWorld !== stateUpside) {
+  componentDidUpdate(_prevProps, prevState) {
+    const { hereIsTheUpsideDownWorld } = this.state;
+    if (prevState.hereIsTheUpsideDownWorld !== hereIsTheUpsideDownWorld) {
       this.searchCharacter();
     }
   }
