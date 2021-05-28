@@ -9,6 +9,8 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 
 const defaultTimeout = 30000;
 
+console.log(process.env)
+
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
   timeout: +process.env.REACT_APP_HAWKINS_TIMEOUT || defaultTimeout,
@@ -130,6 +132,7 @@ class StrangerThings extends React.Component {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
+        {process.env.DEVELOPMENT === 'true' && <h1>Em desenvolvimento</h1> }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
