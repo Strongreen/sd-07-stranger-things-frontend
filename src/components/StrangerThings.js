@@ -17,9 +17,6 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
-
-console.log(process.env)
-
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -45,12 +42,13 @@ class StrangerThings extends React.Component {
   }
 
   componentDidMount() {
-    this.searchCharacter()
+    this.searchCharacter();
   }
 
-  componentDidUpdate(_prevProps, prevState) {
-    if (prevState.hereIsTheUpsideDownWorld !== this.state.hereIsTheUpsideDownWorld) {
-      this.searchCharacter()
+  componentDidUpdate(_prevProps, { hereIsTheUpsideDownWorld }) {
+    const stateUpside = this.state.hereIsTheUpsideDownWorld;
+    if (hereIsTheUpsideDownWorld !== stateUpside) {
+      this.searchCharacter();
     }
   }
 
