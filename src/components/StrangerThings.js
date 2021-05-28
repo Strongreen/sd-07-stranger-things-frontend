@@ -44,7 +44,15 @@ class StrangerThings extends React.Component {
     this.previousPage = this.previousPage.bind(this);
   }
 
+  componentDidMount() {
+    this.searchCharacter()
+  }
 
+  componentDidUpdate(_prevProps, prevState) {
+    if (prevState.hereIsTheUpsideDownWorld !== this.state.hereIsTheUpsideDownWorld) {
+      this.searchCharacter()
+    }
+  }
 
   handleInput(event) {
     this.setState({
