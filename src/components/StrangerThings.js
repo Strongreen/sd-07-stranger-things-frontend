@@ -17,6 +17,7 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
+
 console.log(process.env)
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -42,6 +43,8 @@ class StrangerThings extends React.Component {
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
   }
+
+
 
   handleInput(event) {
     this.setState({
