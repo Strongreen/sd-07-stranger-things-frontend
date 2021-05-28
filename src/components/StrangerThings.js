@@ -7,18 +7,20 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-const defaultTimeout = 30000;
+// const defaultTimeout = 30000;
 
 console.log(process.env)
 
 const strangerThingsConfig = {
-  url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
-  timeout: +process.env.REACT_APP_HAWKINS_TIMEOUT || defaultTimeout,
+  url: process.env.REACT_APP_HAWKINS_URL,
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
+console.log(process.env.REACT_APP_HAWKINS_URL);
+
 const upsideDownConfig = {
-  url: process.env.REACT_APP_UPSIDEDOWN_URL || 'http://localhost:3003',
-  timeout: +process.env.REACT_APP_UPSIDEDOWN_TIMEOUT || defaultTimeout,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -43,6 +45,10 @@ class StrangerThings extends React.Component {
 
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+  }
+  
+  componentDidMount() {
+    this.searchCharacter(1);
   }
 
   handleInput(event) {
