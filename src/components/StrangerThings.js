@@ -134,12 +134,11 @@ class StrangerThings extends React.Component {
       </tr>
     );
   }
+
   render() {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
-    console.log(process.env)
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
-        <h1>Em desenvolvimento</h1>
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
