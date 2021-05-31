@@ -137,7 +137,7 @@ class StrangerThings extends React.Component {
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div>
-            { REACT_APP_DEVELOPMENT === 'true' && <p>Em desenvolvimento</p> }
+          { REACT_APP_DEVELOPMENT === 'true' && <p>Em desenvolvimento</p> }
         </div>
         <div className="content strangerfy">
           <div className="change-reality">
