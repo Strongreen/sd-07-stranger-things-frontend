@@ -135,7 +135,9 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-
+          <div>
+            {process.env.DEVELOPMENT_MODE === 'true' ? 'Em desenvolvimento' : ''}
+          </div>
           <div>
             <input
               placeholder="Nome do Personagem"
@@ -143,9 +145,6 @@ class StrangerThings extends React.Component {
               value={ characterName }
             />
             <button type="button" onClick={ this.searchClick }>Pesquisar</button>
-          </div>
-          <div>
-            {process.env.DEVELOPMENT_MODE === 'true' ? 'Em desenvolvimento' : ''}
           </div>
           <div>
             <table>
