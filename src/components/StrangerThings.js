@@ -10,6 +10,7 @@ const {
   REACT_APP_UPSIDEDOWN_URL = 'http://localhost:3003',
   REACT_APP_HAWKINS_TIMEOUT = DEFAULT_TIMEOUT,
   REACT_APP_UPSIDEDOWN_TIMEOUT = DEFAULT_TIMEOUT,
+  PROD
 } = process.env;
 
 const strangerThingsConfig = {
@@ -166,6 +167,7 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
         </div>
+        {PROD === 'false' && <h2>Em desenvolvimento</h2>}
       </div>
     );
   }
