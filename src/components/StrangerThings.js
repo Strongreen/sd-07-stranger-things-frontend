@@ -10,7 +10,6 @@ const {
   REACT_APP_UPSIDEDOWN_URL = 'http://localhost:3003',
   REACT_APP_HAWKINS_TIMEOUT = DEFAULT_TIMEOUT,
   REACT_APP_UPSIDEDOWN_TIMEOUT = DEFAULT_TIMEOUT,
-  PROD
 } = process.env;
 
 const strangerThingsConfig = {
