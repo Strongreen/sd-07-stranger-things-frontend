@@ -11,7 +11,6 @@ const {
   REACT_APP_HAWKINS_TIMEOUT = DEFAULT_TIMEOUT,
   REACT_APP_UPSIDEDOWN_TIMEOUT = DEFAULT_TIMEOUT,
 } = process.env;
-
 const strangerThingsConfig = {
   url: REACT_APP_HAWKINS_URL,
   timeout: REACT_APP_HAWKINS_TIMEOUT,
