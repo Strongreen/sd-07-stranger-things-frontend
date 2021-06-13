@@ -74,7 +74,6 @@ class StrangerThings extends React.Component {
     const service = hereIsTheUpsideDownWorld
       ? charactersUpsideDownService
       : charactersService;
-
     const numberOfPages = 10;
     service
       .getCharacters(characterName, pages || page, numberOfPages)
