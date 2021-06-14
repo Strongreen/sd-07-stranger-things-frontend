@@ -28,7 +28,6 @@ class StrangerThings extends React.Component {
       characters: [],
       page: 1,
     };
-
     this.handleInput = this.handleInput.bind(this);
     this.changeRealityClick = this.changeRealityClick.bind(this);
 
