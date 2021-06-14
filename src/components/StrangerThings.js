@@ -36,8 +36,6 @@ class StrangerThings extends React.Component {
       characters: [],
       page: 1,
     };
-console.log(REACT_APP_HAWKINS_URL);
-console.log(REACT_APP_UPSIDEDOWN_URL);
 
     this.handleInput = this.handleInput.bind(this);
     this.changeRealityClick = this.changeRealityClick.bind(this);
