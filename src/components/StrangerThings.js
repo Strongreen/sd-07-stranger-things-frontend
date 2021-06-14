@@ -33,10 +33,8 @@ class StrangerThings extends React.Component {
     };
     this.handleInput = this.handleInput.bind(this);
     this.changeRealityClick = this.changeRealityClick.bind(this);
-
     this.searchClick = this.searchClick.bind(this);
     this.searchCharacter = this.searchCharacter.bind(this);
-
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
   }
